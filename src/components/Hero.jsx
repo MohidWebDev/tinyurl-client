@@ -17,7 +17,7 @@ const Hero = () => {
     setShortURL("");
 
     try {
-      const response = await fetch("/api/save", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/save`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ longURL }),
