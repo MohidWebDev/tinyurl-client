@@ -17,11 +17,14 @@ const Hero = () => {
     setShortURL("");
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/save`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ longURL }),
-      });
+      const response = await fetch(
+        `tinyurl-server-production-d316.up.railway.app/save`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ longURL }),
+        },
+      );
 
       const data = await response.json();
 
