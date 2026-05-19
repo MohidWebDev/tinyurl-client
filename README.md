@@ -1,17 +1,11 @@
 # tinyurl-client
 
-A TinyURL-inspired URL shortener frontend built with **React + Vite**. Allows users to paste a long URL and instantly receive a shortened link powered by the [tinyurl-server](https://github.com/YOUR_USERNAME/tinyurl-server) backend.
+A TinyURL-inspired URL shortener frontend built with **React + Vite**. Allows users to paste a long URL and instantly receive a shortened link powered by the [tinyurl-server](https://github.com/MohidWebDev/tinyurl-server.git) backend.
 
 ## 🔗 Related Repository
 
 This is the **frontend** of a two-part project.
-👉 Backend repo: [tinyurl-server](https://github.com/YOUR_USERNAME/tinyurl-server)
-
-## 📸 Preview
-
-![TinyURL Client Preview](./public/preview.png)
-
-> Add a screenshot of the app to your `public/` folder named `preview.png` to display it here.
+👉 Backend repo: [tinyurl-server](https://github.com/MohidWebDev/tinyurl-server.git)
 
 ## 🛠️ Tech Stack
 
@@ -22,50 +16,52 @@ This is the **frontend** of a two-part project.
 
 ## 📁 Folder Structure
 
+```
 tinyurl-client/
 ├── public/
 ├── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── CTA.jsx
-│ │ ├── FAQ.jsx
-│ │ ├── Footer.jsx
-│ │ ├── Hero.jsx
-│ │ ├── Info.jsx
-│ │ ├── Navbar.jsx
-│ │ ├── Plans.jsx
-│ │ ├── Solutions.jsx
-│ │ └── Stats.jsx
-│ ├── App.css
-│ ├── App.jsx
-│ └── main.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── CTA.jsx
+│   │   ├── FAQ.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Info.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Plans.jsx
+│   │   ├── Solutions.jsx
+│   │   └── Stats.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   └── main.jsx
 ├── index.html
 ├── vite.config.js
 └── package.json
+```
 
 ## ⚙️ Setup & Installation
 
 1. Clone the repository
 
-```bash
-   git clone https://github.com/YOUR_USERNAME/tinyurl-client.git
+   ```bash
+   git clone https://github.com/MohidWebDev/tinyurl-client.git
    cd tinyurl-client
-```
+   ```
 
 2. Install dependencies
 
-```bash
+   ```bash
    npm install
-```
+   ```
 
 3. Make sure the backend server is running on `http://localhost:5050`
-   👉 [tinyurl-server setup guide](https://github.com/YOUR_USERNAME/tinyurl-server#setup--installation)
+   👉 [tinyurl-server setup guide](https://github.com/MohidWebDev/tinyurl-server#setup--installation)
 
 4. Start the development server
 
-```bash
+   ```bash
    npm run dev
-```
+   ```
 
 5. Open your browser at `http://localhost:5173`
 
