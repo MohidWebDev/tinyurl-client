@@ -1,16 +1,100 @@
-# React + Vite
+# tinyurl-client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A TinyURL-inspired URL shortener frontend built with **React + Vite**. Allows users to paste a long URL and instantly receive a shortened link powered by the [tinyurl-server](https://github.com/YOUR_USERNAME/tinyurl-server) backend.
 
-Currently, two official plugins are available:
+## 🔗 Related Repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This is the **frontend** of a two-part project.
+👉 Backend repo: [tinyurl-server](https://github.com/YOUR_USERNAME/tinyurl-server)
 
-## React Compiler
+## 📸 Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![TinyURL Client Preview](./public/preview.png)
 
-## Expanding the ESLint configuration
+> Add a screenshot of the app to your `public/` folder named `preview.png` to display it here.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- React 18
+- Vite
+- CSS (custom, no UI library)
+- Font Awesome (icons)
+
+## 📁 Folder Structure
+
+tinyurl-client/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ │ ├── CTA.jsx
+│ │ ├── FAQ.jsx
+│ │ ├── Footer.jsx
+│ │ ├── Hero.jsx
+│ │ ├── Info.jsx
+│ │ ├── Navbar.jsx
+│ │ ├── Plans.jsx
+│ │ ├── Solutions.jsx
+│ │ └── Stats.jsx
+│ ├── App.css
+│ ├── App.jsx
+│ └── main.jsx
+├── index.html
+├── vite.config.js
+└── package.json
+
+## ⚙️ Setup & Installation
+
+1. Clone the repository
+
+```bash
+   git clone https://github.com/YOUR_USERNAME/tinyurl-client.git
+   cd tinyurl-client
+```
+
+2. Install dependencies
+
+```bash
+   npm install
+```
+
+3. Make sure the backend server is running on `http://localhost:5050`
+   👉 [tinyurl-server setup guide](https://github.com/YOUR_USERNAME/tinyurl-server#setup--installation)
+
+4. Start the development server
+
+```bash
+   npm run dev
+```
+
+5. Open your browser at `http://localhost:5173`
+
+## 🔁 How It Works
+
+1. User pastes a long URL into the input field and clicks **Shorten Link**
+2. The frontend sends a `POST /api/save` request to the backend (proxied via Vite)
+3. The backend returns a short URL
+4. The short URL is displayed inside the card with a **Copy** button
+5. Clicking the short URL redirects the user to the original long URL
+
+## 🔀 Vite Proxy
+
+The `vite.config.js` is configured to proxy API requests to the backend during development:
+
+```js
+server: {
+  proxy: {
+    '/api': {
+      target: 'http://localhost:5050',
+      changeOrigin: true,
+      rewrite: (path) => path.replace(/^\/api/, ''),
+    },
+  },
+},
+```
+
+This avoids CORS issues during local development.
+
+## 📄 License
+
+MIT
